@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/CaseStudy_2/css/style.css">
+
+    <script src="/CaseStudy_2/js/script.js"></script>
+</head>
+<body style="background-color: #f5f5f5;">
+    <div class="container-fluid sticky-top sticky-md-top sticky-xxl-top">
+        <div class="row header">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg">
+              <div class="container">
+                <a class="navbar-brand me-5" href="#">
+                  <img src="/CaseStudy_2/assets/logofpt.png" alt="logo" width="151" height="40">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <form class="d-flex me-5 search-form" role="search">
+                    <input class="form-control" type="search" maxlength="1100" placeholder="Nhập sản phẩm cần tìm..." aria-label="Search">
+                    <button type="submit"><i class="bi bi-search" style="color: #fff;"></i></button>
+                  </form>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="dropdow">
+                      <li class="nav-item me-3">
+                        <a class="nav-link" href="#"><i class="bi bi-file-earmark-text-fill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Thông tin hay" style="font-size:24px; color: #fff;"></i></a>
+                        <ul class="subnav shadow p-3 mb-5 bg-body-tertiary rounded">
+                          <li><a href="#">Tin mới</a></li>
+                          <li><a href="#">Khuyến mãi</a></li>
+                          <li><a href="#">Điện máy - Gia dụng</a></li>
+                          <li><a href="#">Thủ thuật</a></li>
+                          <li><a href="#">For Gamers</a></li>
+                          <li><a href="#">Video hot</a></li>
+                          <li><a href="#">Đánh giá - Tư vấn</a></li>
+                          <li><a href="#">App & Game</a></li>
+                          <li><a href="#">Sự kiện</a></li>
+                        </ul>
+                        <li class="arrow"><i class="bi bi-caret-up-fill"></i></li>
+                      </li>
+                    </ul>
+                    <li class="nav-item me-3">
+                      <a class="nav-link" href="#"><i class="bi bi-clipboard2-check-fill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Thanh toán" style="font-size:24px; color: #fff;"></i></a>
+                    </li>
+                    <li class="nav-item me-3">
+                      <a class="nav-link" href="#"><i class="bi bi-person-circle" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tài khoản" style="font-size:24px; color: #fff;"></i></a>
+                    </li>
+                    <li class="nav-item me-3">
+                      <a class="nav-link" href="#"><i class="bi bi-cart-check-fill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Giỏ hàng" style="font-size:24px; color: #fff;"></i></a>
+                    </li>
+                  </ul>
+                </div>
+    
+                <div class="off">
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-justify" style="color: #fff; font-size: 30px;"></i></a>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                      <a href="#"><img src="/CaseStudy_2/assets/logofpt.png" alt="logo" width="151" height="40"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <form class="d-flex me-5 search-form" role="search">
+                        <input class="form-control" type="search" maxlength="1100" placeholder="Nhập sản phẩm cần tìm..." aria-label="Search">
+                        <button type="submit"><i class="bi bi-search" style="color: #fff;"></i></button>
+                      </form>
+                      <br>
+    
+                      <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              <i class="bi bi-phone" style="padding-right: 5px;"></i>Điện thoại
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"> 
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">Apple (iPhone)</a>
+                                <a href="#" class="list-group-item list-group-item-action">Samsung</a>
+                                <a href="#" class="list-group-item list-group-item-action">OPPO</a>
+                                <a href="#" class="list-group-item list-group-item-action">Xiaomi</a>
+                                <a href="#" class="list-group-item list-group-item-action">Realme</a>
+                                <a href="#" class="list-group-item list-group-item-action">Vivo</a>
+                                <a href="#" class="list-group-item list-group-item-action">Asus</a>
+                                <a href="#" class="list-group-item list-group-item-action">Masstel</a>
+                                <a href="#" class="list-group-item list-group-item-action">Nokia</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                              <i class="bi bi-laptop" style="padding-right: 5px;"></i>Laptop
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">Apple (Macbook)</a>
+                                <a href="#" class="list-group-item list-group-item-action">Asus</a>
+                                <a href="#" class="list-group-item list-group-item-action">MSI</a>
+                                <a href="#" class="list-group-item list-group-item-action">HP</a>
+                                <a href="#" class="list-group-item list-group-item-action">Lenovo</a>
+                                <a href="#" class="list-group-item list-group-item-action">Acer</a>
+                                <a href="#" class="list-group-item list-group-item-action">Dell</a>
+                                <a href="#" class="list-group-item list-group-item-action">Gigabyte</a>
+                                <a href="#" class="list-group-item list-group-item-action">Masstel</a>
+                                <a href="#" class="list-group-item list-group-item-action">Microsoft (Surface)</a>
+                                <a href="#" class="list-group-item list-group-item-action">Chuwi</a>
+                                <a href="#" class="list-group-item list-group-item-action">LG</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                              <i class="bi bi-phone-landscape" style="padding-right: 5px;"></i>Máy tính bảng
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">Apple (iPad)</a>
+                                <a href="#" class="list-group-item list-group-item-action">Samsung</a>
+                                <a href="#" class="list-group-item list-group-item-action">Masstel</a>
+                                <a href="#" class="list-group-item list-group-item-action">Lenovo</a>
+                                <a href="#" class="list-group-item list-group-item-action">Xiaomi</a>
+                                <a href="#" class="list-group-item list-group-item-action">OPPO</a>
+                                <a href="#" class="list-group-item list-group-item-action">Coolpad</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                              <i class="bi bi-apple" style="padding-right: 5px;"></i>Apple
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">iPad</a>
+                                <a href="#" class="list-group-item list-group-item-action">iPhone</a>
+                                <a href="#" class="list-group-item list-group-item-action">Macbook</a>
+                                <a href="#" class="list-group-item list-group-item-action">Apple Watch</a>
+                                <a href="#" class="list-group-item list-group-item-action">Apple Tai Nghe</a>
+                                <a href="#" class="list-group-item list-group-item-action">iMac</a>
+                                <a href="#" class="list-group-item list-group-item-action">Mac Mini</a>
+                                <a href="#" class="list-group-item list-group-item-action">Sạc & Cáp</a>
+                                <a href="#" class="list-group-item list-group-item-action">Ốp lưng & Bao da</a>
+                                <a href="#" class="list-group-item list-group-item-action">Apple TV</a>
+                                <a href="#" class="list-group-item list-group-item-action">Chuột & Trackpad</a>
+                                <a href="#" class="list-group-item list-group-item-action">Bàn phím</a>
+                                <a href="#" class="list-group-item list-group-item-action">Air Tag</a>
+                                <a href="#" class="list-group-item list-group-item-action">Hàng dự án</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                              <i class="bi bi-pc-display" style="padding-right: 5px;"></i>PC - Linh kiện
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">PC</a>
+                                <a href="#" class="list-group-item list-group-item-action">Linh kiện</a>
+                                <a href="#" class="list-group-item list-group-item-action">Màn hình</a>
+                                <a href="#" class="list-group-item list-group-item-action">Xây dựng PC</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                              <i class="bi bi-headphones" style="padding-right: 5px;"></i>Phụ kiện
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">Router</a>
+                                <a href="#" class="list-group-item list-group-item-action">Bao da ốp lưng</a>
+                                <a href="#" class="list-group-item list-group-item-action">Sạc dự phòng</a>
+                                <a href="#" class="list-group-item list-group-item-action">Thẻ nhớ</a>
+                                <a href="#" class="list-group-item list-group-item-action">Phụ kiện Apple</a>
+                                <a href="#" class="list-group-item list-group-item-action">Miếng dán màn hình</a>
+                                <a href="#" class="list-group-item list-group-item-action">Loa</a>
+                                <a href="#" class="list-group-item list-group-item-action">USB - Ổ cứng</a>
+                                <a href="#" class="list-group-item list-group-item-action">Sạc Cáp</a>
+                                <a href="#" class="list-group-item list-group-item-action">Tai nghe</a>
+                                <a href="#" class="list-group-item list-group-item-action">Chuột</a>
+                                <a href="#" class="list-group-item list-group-item-action">Bàn ghế Gaming</a>
+                                <a href="#" class="list-group-item list-group-item-action">Balo - Túi xách</a>
+                                <a href="#" class="list-group-item list-group-item-action">TV Box</a>
+                                <a href="#" class="list-group-item list-group-item-action">Phụ kiện khác</a>
+                                <a href="#" class="list-group-item list-group-item-action">Phụ kiện khẩu trang lọc khí</a>
+                                <a href="#" class="list-group-item list-group-item-action">Bàn phím</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                              Dịch vụ khác
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-arrow-clockwise" style="padding-right: 5px;"></i>Máy cũ</a>
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill" style="padding-right: 5px;"></i>Hàng gia dụng</a>
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-sim-fill" style="padding-right: 5px;"></i>Sim & thẻ</a>
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-percent" style="padding-right: 5px;"></i>Khuyến mãi</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                              Hỗ trợ khác hàng
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-file-earmark-text-fill" style="padding-right: 5px;"></i>Thông tin hay</a>
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-clipboard2-check-fill" style="padding-right: 5px;"></i>Thanh toán</a>
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-person-circle" style="padding-right: 5px;"></i>Tài khoản</a>
+                                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-cart-check-fill" style="padding-right: 5px;"></i></i>Giỏ hàng</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-dark">
+        <div class="col-12">
+          <ul class="list">
+            <li class="phone"><a href="#"><i class="bi bi-phone"></i>ĐIỆN THOẠI</a>
+              <table class="table shadow p-3 mb-5 bg-body-tertiary rounded table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">HÃNG SẢN XUẤT</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">MỨC GIÁ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Apple (iPhone)</a></td>
+                    <td><a href="#">Samsung</a></td>
+                    <td><a href="#">OPPO</a></td>
+                    <td><a href="#">Dưới 2 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Xiaomi</a></td>
+                    <td><a href="#">Realme</a></td>
+                    <td><a href="#">Vivo</a></td>
+                    <td><a href="#">Từ 2-4 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Asus</a></td>
+                    <td><a href="#">Masstel</a></td>
+                    <td><a href="#">Nokia</a></td>
+                    <td><a href="#">Từ 4-7 triệu</a></td>
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>ĐỒNG HỒ THÔNG MINH</th>
+                    <th></th>
+                    <th></th>
+                    <td><a href="#">Từ 7-13 triệu</a></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Apple Watch</a></td>
+                    <td><a href="#">Samsung</a></td>
+                    <td><a href="#">Garmin</a></td>
+                    <td><a href="#">Trên 13 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Masstel</a></td>
+                    <td><a href="#">Xiaomi</a></td>
+                    <td><a href="#">Amazfit</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Huawei</a></td>
+                    <td><a href="#">Oppo</a></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="laptop"><a href="#"><i class="bi bi-laptop"></i>LAPTOP</a>
+              <table class="table shadow p-3 mb-5 bg-body-tertiary rounded table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">HÃNG SẢN XUẤT</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">MỨC GIÁ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Apple (Macbook)</a></td>
+                    <td><a href="#">Asus</a></td>
+                    <td><a href="#">HP</a></td>
+                    <td><a href="#">Dưới 5 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Lenovo</a></td>
+                    <td><a href="#">MSI</a></td>
+                    <td><a href="#">Gigabyte</a></td>
+                    <td><a href="#">Từ 5-10 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Dell</a></td>
+                    <td><a href="#">Acer</a></td>
+                    <td><a href="#">Masstel</a></td>
+                    <td><a href="#">Từ 10-15 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Microsoft (Surface)</a></td>
+                    <td><a href="#">Chuwi</a></td>
+                    <td><a href="#">LG</a></td>
+                    <td><a href="#">Từ 15-20 triệu</a></td>
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>PHẦN MỀM</th>
+                    <th></th>
+                    <th></th>
+                    <td><a href="#">Từ 20-25 triệu</a></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Diệt virus</a></td>
+                    <td><a href="#">Microsoft Office</a></td>
+                    <td><a href="#">Windows</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Phần mềm khác</a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>MÁY IN</th>
+                    <th></th>
+                    <th></th>
+                    <td><a href="#"></a></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">HP</a></td>
+                    <td><a href="#">Cannon</a></td>
+                    <td><a href="#">Brother</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="ipad"><a href="#"><i class="bi bi-phone-landscape"></i>MÁY TÍNH BẢNG</a>
+              <table class="table shadow p-3 mb-5 bg-body-tertiary rounded table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">HÃNG SẢN XUẤT</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">MỨC GIÁ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Apple (iPad)</a></td>
+                    <td><a href="#">Samsung</a></td>
+                    <td><a href="#">Masstel</a></td>
+                    <td><a href="#">Dưới 2 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Lenovo</a></td>
+                    <td><a href="#">Xiaomi</a></td>
+                    <td><a href="#">OPPO</a></td>
+                    <td><a href="#">Dưới 2-5 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Coolpad</a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#">Dưới 5-8 triệu</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#"></a></td>
+                    <td><a href="#">Trên 8 triệu</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="apple"><a href="#"><i class="bi bi-apple"></i>APPLE</a>
+              <table class="table shadow p-3 mb-5 bg-body-tertiary rounded table-borderless">
+                <thead>
+                  <tr>
+                    <th>CÁC SẢN PHẨM APPLE</th>
+                    <th><a href="#"></a></th>
+                    <th><a href="#"></a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">iPhone</a></td>
+                    <td><a href="#">iPad</a></td>
+                    <td><a href="#">Macbook</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Apple Watch</a></td>
+                    <td><a href="#">Apple Tai Nghe</a></td>
+                    <td><a href="#">iMac</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Mac Mini</a></td>
+                    <td><a href="#">Sạc & Cáp</a></td>
+                    <td><a href="#">Ốp lưng & Bao da</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Apple TV</a></td>
+                    <td><a href="#">Chuột & Trackpad</a></td>
+                    <td><a href="#">Bàn phím</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">AirTag</a></td>
+                    <td><a href="#">Hàng dự án</a></td>
+                    <td><a href="#"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="pc"><a href="#"><i class="bi bi-pc-display"></i>PC-LINH KIỆN</a>
+              <ul class="bg-pc shadow p-3 mb-5 bg-body-tertiary rounded">
+                <li><a href="#">PC</a></li>
+                <li><a href="#">Linh kiện</a></li>
+                <li><a href="#">Màn hình</a></li>
+                <li><a href="#">Xây dựng PC</a></li>
+              </ul>
+            </li>
+            <li class="phukien"><a href="#"><i class="bi bi-headphones"></i>PHỤ KIỆN</a>
+              <table class="table shadow p-3 mb-5 bg-body-tertiary rounded table-borderless">
+                <thead>
+                  <tr>
+                    <th>CÁC SẢN PHẨM PHỤ KIỆN</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Router</a></td>
+                    <td><a href="#">Bao da ốp lưng</a></td>
+                    <td><a href="#">Sạc dự phòng</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Thẻ nhớ</a></td>
+                    <td><a href="#">Phụ kiện Apple</a></td>
+                    <td><a href="#">Miếng dán màn hình</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Loa</a></td>
+                    <td><a href="#">USB - Ổ cứng</a></td>
+                    <td><a href="#">Sạc cáp</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Tai nghe</a></td>
+                    <td><a href="#">Chuột</a></td>
+                    <td><a href="#">Bàn ghế Gaming</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Balo - Túi xách</a></td>
+                    <td><a href="#">TV Box</a></td>
+                    <td><a href="#">Phụ kiện khác</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Phụ kiện khẩu trang lọc khí</a></td>
+                    <td><a href="#">Bàn phím</a></td>
+                    <td><a href="#"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li><a href="#"><i class="bi bi-arrow-clockwise"></i>MÁY CŨ</a></li>
+            <li><a href="#"><i class="bi bi-house-door-fill"></i>HÀNG GIA DỤNG</a></li>
+            <li><a href="#"><i class="bi bi-sim-fill"></i>SIM & THẺ</a></li>
+            <li class="sales"><a href="#"><i class="bi bi-percent"></i>KHUYẾN MÃI</a>
+              <ul class="bg-sales shadow p-3 mb-5 bg-body-tertiary rounded table-borderless">
+                <li><a href="#">Thông tin trao thưởng</a></li>
+                <li><a href="#">Tất cả khuyến mãi</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                      <li class="breadcrumb-item"><a href="#">PC-Máy tính chơi game, Làm việc</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">PC BATTLE GAMING i3 10105F GTX 1650</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row row-cols-xxl-2 bg-light p-3">
+            <div class="col-md-12 col-xxl-6">
+                <img src="/CaseStudy_2/assets/pc-detail.jpg" alt="" class="d-block mt-1" width="100%">
+            </div>
+            <!-- <div class="vr" style="padding: 0;"></div> -->
+            <div class="col-md-12 col-xxl-6 mt-md-3">
+                <h4 style="font-weight: bold;">PC BATTLE GAMING i3 10105F GTX 1650</h4>
+                <p>Tình trạng: <span style="font-weight: bold; color: #F9BB01;">Còn hàng</span></p>
+                <div class="d-flex p-2" style="background-color: #eeeeee; border-radius: 5px;">
+                    <p class="pt-3" style="font-weight: bold;">Giá:</p>
+                    <p class="pt-2" style="padding-left: 100px; font-weight: bold; color: #ff000f; font-size: 30px;">9,990,000đ</p>
+                </div>
+                <div class="d-flex p-2">
+                    <p class="pt-3 me-5" style="font-weight: bold;">Tiêu đề:</p>
+                    <a href="#" style="text-decoration: none;"><p class="p-2 mt-2" style="font-size: 15px; border: 1px solid #F9BB01; border-radius: 5px; color: #F9BB01;">PC BATTLE GAMING i3 10105F GTX 1650</p></a>
+                </div>
+                <div class="d-flex p-2">
+                    <p class="pt-3 me-5" style="font-weight: bold;">Số lượng:</p>
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="text" value="1">
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                    </div>
+                </div>
+                <div class="d-flex ms-2 btn-detail">
+                    <button type="button" class="btn btn-outline-danger">THÊM VÀO GIỎ</button>
+                    <button type="button" class="btn btn-danger ms-3">MUA NGAY</button>
+                </div>
+                <div class="d-flex mt-3 list-group-icon">
+                    <p class="mt-2">Chia sẻ:</p>
+                    <ul>
+                        <li><a href="#"><i class="bi bi-facebook" style="color: #25479B;"></i></a></li>
+                        <li><a href="#"><i class="bi bi-messenger"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter" style="color: #55ACEE;"></i></a></li>
+                        <li><a href="#"><i class="bi bi-pinterest" style="color: #CD242A;"></i></a></li>
+                        <li><a href="#"><i class="bi bi-link-45deg" style="color: #2196F3;"></i></a></li>
+                    </ul>
+                </div>
+                <table class="table table-borderless table-success">
+                    <thead>
+                        <tr>
+                            <th>Chính sách bán hàng</th>
+                            <th>Thông tin thêm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="bi bi-box2" style="color: #838383; font-size: 20px; padding-right: 10px;"></i>Cam kết 100% chính hãng</td>
+                            <td><i class="bi bi-shield-fill-check" style="color: #2196F3; font-size: 20px; padding-right: 10px;"></i>Hoàn tiền 111% nếu hàng giả</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-telephone-fill" style="color: #838383; font-size: 20px; padding-right: 10px;"></i>Hỗ trợ 24/7</td>
+                            <td><i class="bi bi-star-fill" style="color: #2196F3; font-size: 20px; padding-right: 10px;"></i>Mở hộp kiểm tra nhận hàng</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><i class="bi bi-arrow-counterclockwise" style="color: #2196F3; font-size: 20px; padding-right: 10px;"></i>Đổi trả trong 7 ngày</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-light mt-3">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-underline ps-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">MÔ TẢ SẢN PHẨM</a>
+                    </li>
+                </ul>
+                <ul class="mt-3">
+                    <li>CPU Intel Core i3 10105F 3.7Ghz</li>
+                    <li>Mainboard ASROCK H470M-HDV</li>
+                    <li>Team Vulcan 8Gb Bus 3200Mhz</li>
+                    <li>GIGABYTE 240GB SATA 3</li>
+                    <li>GIGABYTE/Yeston GTX 1650 4GB</li>
+                    <li>ATOM 550</li>
+                    <li>Vỏ Case Xigmatek Aero 2F Black (2 Fan)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" style="border-radius: 10px; ">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between">
+            <div class="spin">
+              <a href="#" class="khuyen-mai" style="color: #212529;">Sản phẩm liên quan</a>
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a href="#"><i class="bi bi-arrow-left-circle" id="no-drop" style="opacity: 0.5; cursor: no-drop;"></i></a>
+                </li>
+                <li class="page-itemm">
+                  <a href="#"><i class="bi bi-arrow-right-circle"></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row row-cols-4 justify-content-center">
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5" style="border-radius: 10px; ">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between">
+            <div class="spin">
+              <a href="#" class="khuyen-mai" style="color: #212529;">Sản phẩm đã xem</a>
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a href="#"><i class="bi bi-arrow-left-circle" id="no-drop" style="opacity: 0.5; cursor: no-drop;"></i></a>
+                </li>
+                <li class="page-itemm">
+                  <a href="#"><i class="bi bi-arrow-right-circle"></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row row-cols-4 justify-content-center">
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-xxl-3">
+            <div class="card">
+              <a href="#"><img src="/CaseStudy_2/assets/united1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="#"><h5 class="card-title">PC BATTLE GAMING i3 10105F GTX 1650</h5></a>
+                <p class="card-text">9,990,000đ</p>
+                <div class="d-flex justify-content-between">
+                  <i class="bi bi-check2" style="color: #26b60a;">Còn hàng</i>
+                  <a href="#" class="btn btn-outline-danger" style="border-radius: 50%;"><i class="bi bi-bag-plus-fill" style="font-size: 20px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-5 p-3 bg-primary bg-gradient">
+        <div class="container">
+          <div class="row d-flex pt-3 row-cols-md-1 row-cols-xxl-2">
+            <div class="col text-center text-xxl-end" style="color: #fff;">
+              <h4 style="font-weight: bold;">Đăng ký nhận bản tin</h4>
+              <p>Đăng ký để nhận chương trình khuyến mãi mới nhất</p>
+            </div>
+            <div class="col footer">
+              <form class="d-flex pt-2 me-5 search-form" role="search">
+                <input class="form-control" type="search"  placeholder="Vui lòng nhập email của bạn..." aria-label="Search">
+                <button type="submit" style="background-color: #f9bb01;"><i class="bi bi-envelope-heart-fill" style="color: #fff; font-size: 20px;"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5 footer-pc">
+        <div class="row row-cols-4">
+          <div class="col">
+            <h5>Về Shop</h5>
+            <p>Trang thương mại chính thức của Dũng CT - Trực Tiếp Game. Luôn tìm kiếm những sản phẩm vì game thủ.</p>
+            <ul class="list-social">
+              <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="#"><i class="bi bi-google"></i></a></li>
+              <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Thông tin liên hệ</h5>
+            <ul class="list-icon">
+              <li><a href="#"><i class="bi bi-geo-alt-fill"></i></a>180D Thái Thịnh - Đống Đa - Hà Nội.</li>
+              <li><a href="#"><i class="bi bi-telephone-fill"></i></a> 0968 239 497 - 097 221 6881</li>
+              <li><a href="#"><i class="bi bi-envelope-fill"></i></a>ttgshoponline@gmail.com</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Hỗ trợ khách hàng</h5>
+            <ul class="list-sup">
+              <li><a href="#">Tài khoản ngân hàng</a></li>
+              <li><a href="#">Tìm kiếm</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Chính sách</h5>
+            <ul class="list-policy">
+              <li><a href="#">Chính Sách Bảo Mật</a></li>
+              <li><a href="#">Qui Định Bảo Hành</a></li>
+              <li><a href="#">Chính Sách Đổi Trả </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion footer-mobile" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              <h5>Về Shop</h5>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <p>Trang thương mại chính thức của Dũng CT - Trực Tiếp Game. Luôn tìm kiếm những sản phẩm vì game thủ.</p>
+                <ul class="list-social">
+                  <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                  <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                  <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                  <li><a href="#"><i class="bi bi-google"></i></a></li>
+                  <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              <h5>Thông tin liên hệ</h5>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <ul class="list-icon">
+                <li><a href="#"><i class="bi bi-geo-alt-fill"></i></a>180D Thái Thịnh - Đống Đa - Hà Nội.</li>
+                <li><a href="#"><i class="bi bi-telephone-fill"></i></a> 0968 239 497 - 097 221 6881</li>
+                <li><a href="#"><i class="bi bi-envelope-fill"></i></a>ttgshoponline@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              <h5>Hỗ trợ khách hàng</h5>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <ul class="list-sup">
+                <li><a href="#">Tài khoản ngân hàng</a></li>
+                <li><a href="#">Tìm kiếm</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+              <h5>Chính sách</h5>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <ul class="list-policy">
+                <li><a href="#">Chính Sách Bảo Mật</a></li>
+                <li><a href="#">Qui Định Bảo Hành</a></li>
+                <li><a href="#">Chính Sách Đổi Trả </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <hr>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center copyright">
+              <p>Trang Web này được thiết kế by <a href="#">Cao Tiến Đạt</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+</html>
